@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 3%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 40%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Modern Molt Theme Tokens */
+@layer base {
+  :root {
+    --molt-cyan: 180 100% 50%; /* #00f0ff */
+    --molt-magenta: 300 100% 50%; /* #ff00ff */
+    --molt-orange: 15 100% 60%; /* #ff6b35 */
+  }
+}
+
+/* Space background */
+body {
+  background: #000011;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+html, body, #__next {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Landing page specific styles */
+.landing-gradient {
+  background: linear-gradient(135deg, #000011 0%, #0a0a1a 50%, #000011 100%);
+}
+
+.landing-grid {
+  background-image: 
+    linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.glow-cyan-hover:hover {
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+  transition: box-shadow 0.3s ease-out;
+}
+
+.glow-magenta-hover:hover {
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.4);
+  transition: box-shadow 0.3s ease-out;
+}
+
+.glow-orange-hover:hover {
+  box-shadow: 0 0 30px rgba(255, 107, 53, 0.4);
+  transition: box-shadow 0.3s ease-out;
+}
+
+/* Cesium styles */
+.cesium-viewer {
+  font-family: sans-serif;
+}
+
+.cesium-viewer-toolbar {
+  display: none;
+}
